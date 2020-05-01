@@ -16,10 +16,10 @@ enum ToastDuration: Double {
 }
 
 extension SPViewController {
-    
+
     // 显示 Toast
     func showToast(_ title: String, duration: ToastDuration = .short) {
-        
+        SPToast.showToast(title, duration: duration, yOffset: self.view.frame.size.height / 3)
     }
     
 }

@@ -13,13 +13,15 @@ import MBProgressHUD
 class SPToast {
     
     // 显示 Toast
-    class func showToast(_ title: String, duration: ToastDuration = .short) {
-        let window = rootWindow()
-        let hud = MBProgressHUD.showAdded(to: window, animated: true)
+    static func showToast(_ title: String,
+                          duration: ToastDuration = .short,
+                          view: UIView = SPRootUtils.getRootWindow(),
+                          yOffset: CGFloat = 0) {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
         
         hud.mode = .customView
         hud.removeFromSuperViewOnHide = true
-//        hud.offset.y = CGFloat(self.view.frame.size.height / 3)
+        hud.offset.y = yOffset
         hud.hide(animated: true, afterDelay: duration.rawValue)
         
         hud.bezelView.alpha = 0.8
@@ -35,21 +37,6 @@ class SPToast {
         hud.label.snp.makeConstraints { (make) in
             make.height.equalToSuperview()
         }
-    }
-    
-    // 获取用于显示提示框的 window
-    class func rootWindow() -> UIView {
-        var window = UIApplication.shared.keyWindow
-        if window?.windowLevel != UIWindow.Level.normal {
-            let windowArray = UIApplication.shared.windows
-            for tempWin in windowArray {
-                if tempWin.windowLevel == UIWindow.Level.normal {
-                    window = tempWin;
-                    break
-                }
-            }
-        }
-        return window!
     }
     
 }

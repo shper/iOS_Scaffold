@@ -23,8 +23,10 @@
 		DD5C8EA92455DAD3009C4505 /* JSON+Exteension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EA82455DAD3009C4505 /* JSON+Exteension.swift */; };
 		DD5C8EAD245882B6009C4505 /* SPViewController+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EAC245882B6009C4505 /* SPViewController+Toast.swift */; };
 		DD5C8EAF24588C75009C4505 /* SPViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EAE24588C75009C4505 /* SPViewController+Loading.swift */; };
-		DD5C8EB224588E0B009C4505 /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB124588E0B009C4505 /* UIView+Toast.swift */; };
 		DD5C8EB424588EE8009C4505 /* SPToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB324588EE8009C4505 /* SPToast.swift */; };
+		DD5C8EB6245C2073009C4505 /* SPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB5245C2073009C4505 /* SPLoading.swift */; };
+		DD5C8EB8245C22A9009C4505 /* SPRootUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */; };
+		DD5C8EBB245C246B009C4505 /* UIVIew+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EBA245C246B009C4505 /* UIVIew+Toast.swift */; };
 		DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D42244C43BC0035B6AC /* AppDelegate.swift */; };
 		DDB25D49244C43BD0035B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D48244C43BD0035B6AC /* Assets.xcassets */; };
 		DDB25D4F244C43BD0035B6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D4D244C43BD0035B6AC /* LaunchScreen.storyboard */; };
@@ -73,8 +75,10 @@
 		DD5C8EA82455DAD3009C4505 /* JSON+Exteension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Exteension.swift"; sourceTree = "<group>"; };
 		DD5C8EAC245882B6009C4505 /* SPViewController+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPViewController+Toast.swift"; sourceTree = "<group>"; };
 		DD5C8EAE24588C75009C4505 /* SPViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SPViewController+Loading.swift"; sourceTree = "<group>"; };
-		DD5C8EB124588E0B009C4505 /* UIView+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Toast.swift"; sourceTree = "<group>"; };
 		DD5C8EB324588EE8009C4505 /* SPToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPToast.swift; sourceTree = "<group>"; };
+		DD5C8EB5245C2073009C4505 /* SPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLoading.swift; sourceTree = "<group>"; };
+		DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPRootUtils.swift; sourceTree = "<group>"; };
+		DD5C8EBA245C246B009C4505 /* UIVIew+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Toast.swift"; sourceTree = "<group>"; };
 		DDB25D3F244C43BC0035B6AC /* iOS_Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB25D42244C43BC0035B6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB25D48244C43BD0035B6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,13 +170,23 @@
 		DD5C8E6324546244009C4505 /* SPUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C8EB124588E0B009C4505 /* UIView+Toast.swift */,
+				DD5C8EB9245C22B3009C4505 /* Util */,
 				DD5C8E66245462DA009C4505 /* SPViewController.swift */,
 				DD5C8EAC245882B6009C4505 /* SPViewController+Toast.swift */,
 				DD5C8EAE24588C75009C4505 /* SPViewController+Loading.swift */,
 				DD5C8EB324588EE8009C4505 /* SPToast.swift */,
+				DD5C8EB5245C2073009C4505 /* SPLoading.swift */,
+				DD5C8EBA245C246B009C4505 /* UIVIew+Toast.swift */,
 			);
 			path = SPUIKit;
+			sourceTree = "<group>";
+		};
+		DD5C8EB9245C22B3009C4505 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		DDB25D36244C43BC0035B6AC = {
@@ -511,16 +525,18 @@
 				DD5C8E10244DFAFA009C4505 /* SPLogger.swift in Sources */,
 				DD5C8EAF24588C75009C4505 /* SPViewController+Loading.swift in Sources */,
 				DD5C8E14244E00EC009C4505 /* SPLogFilter.swift in Sources */,
+				DD5C8EB6245C2073009C4505 /* SPLoading.swift in Sources */,
 				DD5C8E1D2453DFEB009C4505 /* RootTabViewController.swift in Sources */,
 				DDB25E76244CA1800035B6AC /* AppConfigModel.swift in Sources */,
 				DD5C8E1B2453475B009C4505 /* SPError.swift in Sources */,
 				DDB25E72244C9A570035B6AC /* DeviceConfigModel.swift in Sources */,
-				DD5C8EB224588E0B009C4505 /* UIView+Toast.swift in Sources */,
 				DD5C8E0D244DF231009C4505 /* SPMoyaProvider.swift in Sources */,
 				DD5C8EB424588EE8009C4505 /* SPToast.swift in Sources */,
 				DDB25E6F244C767A0035B6AC /* RokidApi.swift in Sources */,
+				DD5C8EB8245C22A9009C4505 /* SPRootUtils.swift in Sources */,
 				DD5C8E0B244DEEDD009C4505 /* Moya+Extension.swift in Sources */,
 				DD5C8E5F24543B5F009C4505 /* SettingsViewController.swift in Sources */,
+				DD5C8EBB245C246B009C4505 /* UIVIew+Toast.swift in Sources */,
 				DD5C8E19244E037E009C4505 /* SPLogFileDestination.swift in Sources */,
 				DDB25E74244CA1430035B6AC /* RokidResponse.swift in Sources */,
 				DDB25D77244C54580035B6AC /* HomeViewController.swift in Sources */,
