@@ -73,7 +73,15 @@ class HomeViewController: SPViewController, HomeViewModelDelegate {
     
     @objc func btnClickFun() {
         SPLogger.debug("AAAAA")
-        self.showToast("AAAA")
+//        self.showToast("AAAA")
+//        self.showLoading()
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//            self.hideLoading()
+//
+//            self.showToast("数据加载成功")
+//        }
+        
     }
     
 }

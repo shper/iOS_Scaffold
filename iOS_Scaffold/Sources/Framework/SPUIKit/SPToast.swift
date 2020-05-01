@@ -19,7 +19,8 @@ class SPToast {
                           yOffset: CGFloat = 0) {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         
-        hud.mode = .customView
+        hud.mode = .text
+        hud.animationType = .zoomOut
         hud.removeFromSuperViewOnHide = true
         hud.offset.y = yOffset
         hud.hide(animated: true, afterDelay: duration.rawValue)

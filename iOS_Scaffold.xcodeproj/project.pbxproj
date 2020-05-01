@@ -27,6 +27,7 @@
 		DD5C8EB6245C2073009C4505 /* SPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB5245C2073009C4505 /* SPLoading.swift */; };
 		DD5C8EB8245C22A9009C4505 /* SPRootUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */; };
 		DD5C8EBB245C246B009C4505 /* UIVIew+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EBA245C246B009C4505 /* UIVIew+Toast.swift */; };
+		DD5C8EBD245C563B009C4505 /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EBC245C563B009C4505 /* UIView+Loading.swift */; };
 		DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D42244C43BC0035B6AC /* AppDelegate.swift */; };
 		DDB25D49244C43BD0035B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D48244C43BD0035B6AC /* Assets.xcassets */; };
 		DDB25D4F244C43BD0035B6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D4D244C43BD0035B6AC /* LaunchScreen.storyboard */; };
@@ -79,6 +80,7 @@
 		DD5C8EB5245C2073009C4505 /* SPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLoading.swift; sourceTree = "<group>"; };
 		DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPRootUtils.swift; sourceTree = "<group>"; };
 		DD5C8EBA245C246B009C4505 /* UIVIew+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Toast.swift"; sourceTree = "<group>"; };
+		DD5C8EBC245C563B009C4505 /* UIView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
 		DDB25D3F244C43BC0035B6AC /* iOS_Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB25D42244C43BC0035B6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB25D48244C43BD0035B6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				DD5C8EB324588EE8009C4505 /* SPToast.swift */,
 				DD5C8EB5245C2073009C4505 /* SPLoading.swift */,
 				DD5C8EBA245C246B009C4505 /* UIVIew+Toast.swift */,
+				DD5C8EBC245C563B009C4505 /* UIView+Loading.swift */,
 			);
 			path = SPUIKit;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				DD5C8E19244E037E009C4505 /* SPLogFileDestination.swift in Sources */,
 				DDB25E74244CA1430035B6AC /* RokidResponse.swift in Sources */,
 				DDB25D77244C54580035B6AC /* HomeViewController.swift in Sources */,
+				DD5C8EBD245C563B009C4505 /* UIView+Loading.swift in Sources */,
 				DD5C8E12244E0001009C4505 /* SPLogBaseDestination.swift in Sources */,
 				DD5C8E67245462DA009C4505 /* SPViewController.swift in Sources */,
 			);
