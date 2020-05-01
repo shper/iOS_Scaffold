@@ -82,6 +82,17 @@ class HomeViewController: SPViewController, HomeViewModelDelegate {
 //            self.showToast("数据加载成功")
 //        }
         
+        self.showAlert(title: "Alert", message: "Message", actions: [
+            UIAlertAction(title: "OK", style: .default, handler: { action in
+                print("OK")
+                
+            }),
+            UIAlertAction(title: "cancel", style: .cancel, handler: { action in
+                print("cancel")
+                
+            })]) {
+                print("BBB")
+        }
     }
     
 }
