@@ -1,5 +1,5 @@
 //
-//  SPLogBaseDestination.swift
+//  TKLogBaseDestination.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/21.
@@ -31,7 +31,7 @@ let OS = "Unknown"
 #endif
 
 /// destination which all others inherit from. do not directly use
-open class SPLogBaseDestination: Hashable, Equatable {
+open class TKLogBaseDestination: Hashable, Equatable {
     
     /// output format pattern, see documentation for syntax
     /// output format pattern, see documentation for syntax
@@ -50,7 +50,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
     open var asynchronously = true
     
     /// do not log any message which has a lower level than this one
-    open var minLevel = SPLogger.Level.verbose
+    open var minLevel = TKLogger.Level.verbose
     
     /// set custom log level words for each level
     open var levelString = LevelString()
@@ -94,14 +94,14 @@ open class SPLogBaseDestination: Hashable, Equatable {
     
     public init() {
         let uuid = NSUUID().uuidString
-        let queueLabel = "SPLog-queue-" + uuid
+        let queueLabel = "TKLog-queue-" + uuid
         queue = DispatchQueue(label: queueLabel, target: queue)
     }
     
     /// send / store the formatted log message to the destination
     /// returns the formatted log message for processing by inheriting method
     /// and for unit tests (nil if error)
-    open func send(_ level: SPLogger.Level,
+    open func send(_ level: TKLogger.Level,
                    msg: String,
                    internalInfo: String,
                    thread: String,
@@ -184,7 +184,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
     
     /// returns the log message based on the format pattern
     func formatMessage(_ format: String,
-                       level: SPLogger.Level,
+                       level: TKLogger.Level,
                        msg: String,
                        innerMessage: String,
                        thread: String,
@@ -251,7 +251,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
     }
     
     /// returns the string of a level
-    func levelWord(_ level: SPLogger.Level) -> String {
+    func levelWord(_ level: TKLogger.Level) -> String {
         
         var str = ""
         
@@ -272,11 +272,11 @@ open class SPLogBaseDestination: Hashable, Equatable {
             // Verbose is default
             str = levelString.verbose
         }
-        return str + "/\(SPLogger.loggerTag)" // append loggerTag
+        return str + "/\(TKLogger.loggerTag)" // append loggerTag
     }
     
     /// returns color string for level
-    func colorForLevel(_ level: SPLogger.Level) -> String {
+    func colorForLevel(_ level: TKLogger.Level) -> String {
         var color = ""
         
         switch level {
@@ -368,7 +368,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
             let jsonData = try JSONSerialization.data(withJSONObject: dict, options: [])
             jsonString = String(data: jsonData, encoding: .utf8)
         } catch {
-            print("SPLog could not create JSON from dict.")
+            print("TKLogger could not create JSON from dict.")
         }
         return jsonString
     }
@@ -399,13 +399,13 @@ open class SPLogBaseDestination: Hashable, Equatable {
     /// returns boolean and is used to decide whether to resolve
     /// the message before invoking shouldLevelBeLogged
     func hasMessageFilters() -> Bool {
-        return !getFiltersTargeting(SPLogFilter.TargetType.Message(.Equals([], true)),
+        return !getFiltersTargeting(TKLogFilter.TargetType.Message(.Equals([], true)),
                                     fromFilters: self.filters).isEmpty
     }
     
     /// checks if level is at least minLevel or if a minLevel filter for that path does exist
     /// returns boolean and can be used to decide if a message should be logged or not
-    func shouldLevelBeLogged(_ level: SPLogger.Level, path: String,
+    func shouldLevelBeLogged(_ level: TKLogger.Level, path: String,
                              function: String, message: String? = nil) -> Bool {
         
         if filters.isEmpty {
@@ -462,14 +462,14 @@ open class SPLogBaseDestination: Hashable, Equatable {
         return true
     }
     
-    func getFiltersTargeting(_ target: SPLogFilter.TargetType, fromFilters: [FilterType]) -> [FilterType] {
+    func getFiltersTargeting(_ target: TKLogFilter.TargetType, fromFilters: [FilterType]) -> [FilterType] {
         return fromFilters.filter { filter in
             return filter.getTarget() == target
         }
     }
     
     /// returns a tuple of matched and all filters
-    func passedRequiredFilters(_ level: SPLogger.Level,
+    func passedRequiredFilters(_ level: TKLogger.Level,
                                path: String,
                                function: String,
                                message: String?) -> (Int, Int) {
@@ -490,7 +490,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
     }
     
     /// returns a tuple of matched and all filters
-    func passedNonRequiredFilters(_ level: SPLogger.Level,
+    func passedNonRequiredFilters(_ level: TKLogger.Level,
                                   path: String,
                                   function: String,
                                   message: String?) -> (Int, Int) {
@@ -510,7 +510,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
     }
     
     /// returns a tuple of matched and all exclude filters
-    func passedExcludedFilters(_ level: SPLogger.Level,
+    func passedExcludedFilters(_ level: TKLogger.Level,
                                path: String,
                                function: String,
                                message: String?) -> (Int, Int) {
@@ -530,7 +530,7 @@ open class SPLogBaseDestination: Hashable, Equatable {
     }
     
     func applyFilters(_ targetFilters: [FilterType],
-                      level: SPLogger.Level,
+                      level: TKLogger.Level,
                       path: String,
                       function: String,
                       message: String?) -> Int {
@@ -563,6 +563,6 @@ open class SPLogBaseDestination: Hashable, Equatable {
     
 }
 
-public func == (lhs: SPLogBaseDestination, rhs: SPLogBaseDestination) -> Bool {
+public func == (lhs: TKLogBaseDestination, rhs: TKLogBaseDestination) -> Bool {
     return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
 }

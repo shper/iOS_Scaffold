@@ -1,5 +1,5 @@
 //
-//  SPLogConsoleDestination.swift
+//  TKLogConsoleDestination.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/21.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SPLogConsoleDestination: SPLogBaseDestination {
+public class TKLogConsoleDestination: TKLogBaseDestination {
     
     /// use NSLog instead of print, default is false
     /// difference: https://stackoverflow.com/questions/25951195/swift-print-vs-println-vs-nslog
@@ -26,7 +26,7 @@ public class SPLogConsoleDestination: SPLogBaseDestination {
     }
     
     // print to Xcode Console. uses full base class functionality
-    override public func send(_ level: SPLogger.Level, msg: String, internalInfo: String, thread: String,
+    override public func send(_ level: TKLogger.Level, msg: String, internalInfo: String, thread: String,
                               file: String, function: String, line: Int) -> String? {
         let formattedString = super.send(level, msg: msg, internalInfo: internalInfo, thread: thread, file: file, function: function, line: line)
         

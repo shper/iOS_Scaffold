@@ -34,10 +34,10 @@ class HomeViewModel {
         Alamofire.request("https://mobile-service-pro.rokid.com/conf/device_custom_config", method:.get, parameters:parameters).responseJSON { (response) in
             switch response.result {
             case .success:
-                SPLogger.debug("SUCCESS")
+                TKLogger.debug("SUCCESS")
                 self.delegate?.setTextViews(response.description)
             case .failure:
-                SPLogger.warning("ERROR")
+                TKLogger.warning("ERROR")
             }
         }
     }
@@ -47,13 +47,13 @@ class HomeViewModel {
         rokidProvider.request(.deviceCustomConfig(parameters)) { result in
             switch result {
             case .success(let response):
-                SPLogger.debug("SUCCESS")
+                TKLogger.debug("SUCCESS")
                 let rokidResponse = try? response.map(RokidResponse<Array<DeviceConfigModel>>.self)
                 let text = rokidResponse?.object[0].deviceTypeId
                 self.delegate?.setTextViews(text ?? "")
             case .failure(let error):
-                SPLogger.warning("ERROR")
-                SPLogger.warning(error.errorDescription)
+                TKLogger.warning("ERROR")
+                TKLogger.warning(error.errorDescription)
             }
         }
     }
@@ -62,17 +62,17 @@ class HomeViewModel {
         rokidProvider.request(RokidResponse<AppConfigModel>.self, .appConfig("1.3.2")) { result in
             switch result {
             case let .success(response):
-                SPLogger.debug("SUCCESS")
+                TKLogger.debug("SUCCESS")
                 let appConfigModel = response.object
                 
-                let json = appConfigModel.sp_toJSON()
+                let json = appConfigModel.tk_toJSON()
                 
 //                let appConfigModel111 = json?.sp_fromJSON(AppConfigModel.self)
 
                 self.delegate?.setTextViews(json ?? "")
             case let .failure(error):
-                SPLogger.warning("ERROR")
-                SPLogger.warning(error.errorDescription ?? "")
+                TKLogger.warning("ERROR")
+                TKLogger.warning(error.errorDescription ?? "")
             }
         }
     }

@@ -9,8 +9,8 @@
 import Foundation
 import Moya
 
-let rokidProvider = SPMoyaProvider<RokidApi>(plugins: [NetworkLoggerPlugin(verbose: true, requestDataFormatter: { (_ data: Data) -> (String) in
-    return data.sp_toJSON()
+let rokidProvider = TKMoyaProvider<RokidApi>(plugins: [NetworkLoggerPlugin(verbose: true, requestDataFormatter: { (_ data: Data) -> (String) in
+    return data.tk_toJSON()
 })])
 
 public enum RokidApi {

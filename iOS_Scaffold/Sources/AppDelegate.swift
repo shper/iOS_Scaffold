@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AppDelegate.shared = self
         
-        SPLogger.setup(tag: "Scaffold")
+        TKLogger.setup(tag: "Scaffold")
         
         setupBootViewController()
         

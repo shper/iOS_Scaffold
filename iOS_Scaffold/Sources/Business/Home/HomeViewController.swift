@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import SnapKit
 
-class HomeViewController: SPViewController, HomeViewModelDelegate {
+class HomeViewController: TKViewController, HomeViewModelDelegate {
 
     var viewModel: HomeViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SPLogger.debug("viewDidLoad")
+        TKLogger.debug("viewDidLoad")
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -72,7 +72,7 @@ class HomeViewController: SPViewController, HomeViewModelDelegate {
     // MARK - Target
     
     @objc func btnClickFun() {
-        SPLogger.debug("AAAAA")
+        TKLogger.debug("AAAAA")
 //        self.showToast("AAAA")
 //        self.showLoading()
         

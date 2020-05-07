@@ -1,5 +1,5 @@
 //
-//  SPViewController.swift
+//  TKViewController.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/25.
@@ -13,42 +13,42 @@ import MBProgressHUD
 /*
  VC 基类
  */
-class SPViewController : UIViewController {
+class TKViewController : UIViewController {
     
     override func loadView() {
         super.loadView()
 
-        SPLogger.debug("loadView")
+        TKLogger.debug("loadView")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        SPLogger.debug("viewDidLoad")
+        TKLogger.debug("viewDidLoad")
         
         setupLayout()
     }
     
     func setupLayout() {
-        SPLogger.debug("setupLayout")
+        TKLogger.debug("setupLayout")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        SPLogger.debug("viewWillAppear")
+        TKLogger.debug("viewWillAppear")
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        SPLogger.debug("viewWillDisappear")
+        TKLogger.debug("viewWillDisappear")
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
 
-        SPLogger.debug("viewDidDisappear")
+        TKLogger.debug("viewDidDisappear")
     }
 
 }
@@ -60,32 +60,32 @@ enum ToastDuration: Double {
     case long = 6
 }
 
-extension SPViewController {
+extension TKViewController {
 
     // 显示 Toast
     func showToast(_ title: String, duration: ToastDuration = .short) {
-        SPToast.showToast(title, duration: duration, yOffset: self.view.frame.size.height / 3)
+        TKToast.showToast(title, duration: duration, yOffset: self.view.frame.size.height / 3)
     }
     
 }
 
 // MARK: Loading
 
-extension SPViewController {
+extension TKViewController {
 
     func showLoading() {
-        SPLoading.shared.show()
+        TKLoading.shared.show()
     }
     
     func hideLoading() {
-        SPLoading.shared.hide()
+        TKLoading.shared.hide()
     }
     
 }
 
 // MARK: Alert
 
-extension SPViewController {
+extension TKViewController {
     
     func showAlert(title: String, message: String, actions: [UIAlertAction]?, completion: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

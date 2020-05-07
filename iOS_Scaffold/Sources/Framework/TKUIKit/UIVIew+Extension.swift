@@ -15,7 +15,7 @@ extension UIView {
     
     // 显示 Toast
     func showToast(_ title: String, duration: ToastDuration = .short) {
-        SPToast.showToast(title, duration: duration, view: self, yOffset: self.frame.size.height / 3)
+        TKToast.showToast(title, duration: duration, view: self, yOffset: self.frame.size.height / 3)
     }
     
 }
@@ -25,11 +25,11 @@ extension UIView {
 extension UIView {
     
     func showLoading() {
-        SPLoading.shared.show()
+        TKLoading.shared.show()
     }
     
     func hideLoading() {
-        SPLoading.shared.hide()
+        TKLoading.shared.hide()
     }
     
 }

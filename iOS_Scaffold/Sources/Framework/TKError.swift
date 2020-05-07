@@ -1,5 +1,5 @@
 //
-//  SPError.swift
+//  TKError.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/25.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public enum SPError : Error {
+public enum TKError : Error {
     
     case network(String, String?)
 }
 
-public extension SPError {
+public extension TKError {
 
     /// Depending on error type, returns a `Response` object.
     var response: String? {
@@ -32,7 +32,7 @@ public extension SPError {
 
 // MARK: - Error Descriptions
 
-extension SPError: LocalizedError {
+extension TKError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .network:
@@ -43,7 +43,7 @@ extension SPError: LocalizedError {
 
 // MARK: - Error User Info
 
-extension SPError: CustomNSError {
+extension TKError: CustomNSError {
     public var errorUserInfo: [String: Any] {
         var userInfo: [String: Any] = [:]
         userInfo[NSLocalizedDescriptionKey] = errorDescription

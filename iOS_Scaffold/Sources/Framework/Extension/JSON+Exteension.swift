@@ -12,7 +12,7 @@ import Foundation
 
 extension Data {
     
-    func sp_toJSON() -> String {
+    func tk_toJSON() -> String {
         do {
             let dataAsJSON = try JSONSerialization.jsonObject(with: self)
             let prettyData = try JSONSerialization.data(withJSONObject: dataAsJSON, options: .fragmentsAllowed)
@@ -26,7 +26,7 @@ extension Data {
 
 extension Encodable {
 
-    func sp_toJSON() -> String? {
+    func tk_toJSON() -> String? {
         guard let data = try? JSONEncoder().encode(self) else {
             return nil
         }
@@ -40,7 +40,7 @@ extension Encodable {
 
 extension Data {
     
-    func sp_fromJSON<T: Decodable>(_ type: T.Type) -> T? {
+    func tk_fromJSON<T: Decodable>(_ type: T.Type) -> T? {
         return try? JSONDecoder().decode(type, from: self)
     }
     
@@ -48,8 +48,8 @@ extension Data {
 
 extension String {
 
-    func sp_fromJSON<T: Decodable>(_ type: T.Type) ->  T? {
-        return self.data(using: .utf8)?.sp_fromJSON(type)
+    func tk_fromJSON<T: Decodable>(_ type: T.Type) ->  T? {
+        return self.data(using: .utf8)?.tk_fromJSON(type)
     }
 
 }

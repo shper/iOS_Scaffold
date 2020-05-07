@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		28577ED9E9158E381554B811 /* Pods_iOS_Scaffold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB89E1BF5B9631D292E048D9 /* Pods_iOS_Scaffold.framework */; };
 		DD5C8E0B244DEEDD009C4505 /* Moya+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0A244DEEDD009C4505 /* Moya+Extension.swift */; };
-		DD5C8E0D244DF231009C4505 /* SPMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0C244DF231009C4505 /* SPMoyaProvider.swift */; };
-		DD5C8E10244DFAFA009C4505 /* SPLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0F244DFAFA009C4505 /* SPLogger.swift */; };
-		DD5C8E12244E0001009C4505 /* SPLogBaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E11244E0001009C4505 /* SPLogBaseDestination.swift */; };
-		DD5C8E14244E00EC009C4505 /* SPLogFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E13244E00EC009C4505 /* SPLogFilter.swift */; };
-		DD5C8E16244E0239009C4505 /* SPLogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E15244E0239009C4505 /* SPLogConsoleDestination.swift */; };
-		DD5C8E19244E037E009C4505 /* SPLogFileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E18244E037E009C4505 /* SPLogFileDestination.swift */; };
-		DD5C8E1B2453475B009C4505 /* SPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E1A2453475B009C4505 /* SPError.swift */; };
+		DD5C8E0D244DF231009C4505 /* TKMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0C244DF231009C4505 /* TKMoyaProvider.swift */; };
+		DD5C8E10244DFAFA009C4505 /* TKLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0F244DFAFA009C4505 /* TKLogger.swift */; };
+		DD5C8E12244E0001009C4505 /* TKLogBaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E11244E0001009C4505 /* TKLogBaseDestination.swift */; };
+		DD5C8E14244E00EC009C4505 /* TKLogFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E13244E00EC009C4505 /* TKLogFilter.swift */; };
+		DD5C8E16244E0239009C4505 /* TKLogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E15244E0239009C4505 /* TKLogConsoleDestination.swift */; };
+		DD5C8E19244E037E009C4505 /* TKLogFileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E18244E037E009C4505 /* TKLogFileDestination.swift */; };
+		DD5C8E1B2453475B009C4505 /* TKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E1A2453475B009C4505 /* TKError.swift */; };
 		DD5C8E1D2453DFEB009C4505 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E1C2453DFEB009C4505 /* RootTabViewController.swift */; };
 		DD5C8E5F24543B5F009C4505 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E5E24543B5F009C4505 /* SettingsViewController.swift */; };
 		DD5C8E6224545ADA009C4505 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E6124545ADA009C4505 /* HomeViewModel.swift */; };
-		DD5C8E67245462DA009C4505 /* SPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E66245462DA009C4505 /* SPViewController.swift */; };
+		DD5C8E67245462DA009C4505 /* TKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E66245462DA009C4505 /* TKViewController.swift */; };
 		DD5C8EA92455DAD3009C4505 /* JSON+Exteension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EA82455DAD3009C4505 /* JSON+Exteension.swift */; };
-		DD5C8EB424588EE8009C4505 /* SPToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB324588EE8009C4505 /* SPToast.swift */; };
-		DD5C8EB6245C2073009C4505 /* SPLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB5245C2073009C4505 /* SPLoading.swift */; };
-		DD5C8EB8245C22A9009C4505 /* SPRootUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */; };
+		DD5C8EB424588EE8009C4505 /* TKToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB324588EE8009C4505 /* TKToast.swift */; };
+		DD5C8EB6245C2073009C4505 /* TKLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB5245C2073009C4505 /* TKLoading.swift */; };
+		DD5C8EB8245C22A9009C4505 /* TKRootUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB7245C22A9009C4505 /* TKRootUtils.swift */; };
 		DD5C8EBB245C246B009C4505 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EBA245C246B009C4505 /* UIVIew+Extension.swift */; };
 		DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D42244C43BC0035B6AC /* AppDelegate.swift */; };
 		DDB25D49244C43BD0035B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D48244C43BD0035B6AC /* Assets.xcassets */; };
@@ -59,21 +59,21 @@
 		740F465A25B21D24A71697D4 /* Pods-iOS_Scaffold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Scaffold.release.xcconfig"; path = "Target Support Files/Pods-iOS_Scaffold/Pods-iOS_Scaffold.release.xcconfig"; sourceTree = "<group>"; };
 		CB89E1BF5B9631D292E048D9 /* Pods_iOS_Scaffold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Scaffold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5C8E0A244DEEDD009C4505 /* Moya+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Extension.swift"; sourceTree = "<group>"; };
-		DD5C8E0C244DF231009C4505 /* SPMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPMoyaProvider.swift; sourceTree = "<group>"; };
-		DD5C8E0F244DFAFA009C4505 /* SPLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLogger.swift; sourceTree = "<group>"; };
-		DD5C8E11244E0001009C4505 /* SPLogBaseDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLogBaseDestination.swift; sourceTree = "<group>"; };
-		DD5C8E13244E00EC009C4505 /* SPLogFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLogFilter.swift; sourceTree = "<group>"; };
-		DD5C8E15244E0239009C4505 /* SPLogConsoleDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLogConsoleDestination.swift; sourceTree = "<group>"; };
-		DD5C8E18244E037E009C4505 /* SPLogFileDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLogFileDestination.swift; sourceTree = "<group>"; };
-		DD5C8E1A2453475B009C4505 /* SPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPError.swift; sourceTree = "<group>"; };
+		DD5C8E0C244DF231009C4505 /* TKMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKMoyaProvider.swift; sourceTree = "<group>"; };
+		DD5C8E0F244DFAFA009C4505 /* TKLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogger.swift; sourceTree = "<group>"; };
+		DD5C8E11244E0001009C4505 /* TKLogBaseDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogBaseDestination.swift; sourceTree = "<group>"; };
+		DD5C8E13244E00EC009C4505 /* TKLogFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogFilter.swift; sourceTree = "<group>"; };
+		DD5C8E15244E0239009C4505 /* TKLogConsoleDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogConsoleDestination.swift; sourceTree = "<group>"; };
+		DD5C8E18244E037E009C4505 /* TKLogFileDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogFileDestination.swift; sourceTree = "<group>"; };
+		DD5C8E1A2453475B009C4505 /* TKError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKError.swift; sourceTree = "<group>"; };
 		DD5C8E1C2453DFEB009C4505 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		DD5C8E5E24543B5F009C4505 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DD5C8E6124545ADA009C4505 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		DD5C8E66245462DA009C4505 /* SPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPViewController.swift; sourceTree = "<group>"; };
+		DD5C8E66245462DA009C4505 /* TKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKViewController.swift; sourceTree = "<group>"; };
 		DD5C8EA82455DAD3009C4505 /* JSON+Exteension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Exteension.swift"; sourceTree = "<group>"; };
-		DD5C8EB324588EE8009C4505 /* SPToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPToast.swift; sourceTree = "<group>"; };
-		DD5C8EB5245C2073009C4505 /* SPLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPLoading.swift; sourceTree = "<group>"; };
-		DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPRootUtils.swift; sourceTree = "<group>"; };
+		DD5C8EB324588EE8009C4505 /* TKToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKToast.swift; sourceTree = "<group>"; };
+		DD5C8EB5245C2073009C4505 /* TKLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLoading.swift; sourceTree = "<group>"; };
+		DD5C8EB7245C22A9009C4505 /* TKRootUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKRootUtils.swift; sourceTree = "<group>"; };
 		DD5C8EBA245C246B009C4505 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		DDB25D3F244C43BC0035B6AC /* iOS_Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB25D42244C43BC0035B6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,16 +127,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD5C8E0E244DF908009C4505 /* SPLogger */ = {
+		DD5C8E0E244DF908009C4505 /* TKLogger */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C8E0F244DFAFA009C4505 /* SPLogger.swift */,
-				DD5C8E11244E0001009C4505 /* SPLogBaseDestination.swift */,
-				DD5C8E13244E00EC009C4505 /* SPLogFilter.swift */,
-				DD5C8E15244E0239009C4505 /* SPLogConsoleDestination.swift */,
-				DD5C8E18244E037E009C4505 /* SPLogFileDestination.swift */,
+				DD5C8E0F244DFAFA009C4505 /* TKLogger.swift */,
+				DD5C8E11244E0001009C4505 /* TKLogBaseDestination.swift */,
+				DD5C8E13244E00EC009C4505 /* TKLogFilter.swift */,
+				DD5C8E15244E0239009C4505 /* TKLogConsoleDestination.swift */,
+				DD5C8E18244E037E009C4505 /* TKLogFileDestination.swift */,
 			);
-			path = SPLogger;
+			path = TKLogger;
 			sourceTree = "<group>";
 		};
 		DD5C8E5C24543AF4009C4505 /* Root */ = {
@@ -163,22 +163,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DD5C8E6324546244009C4505 /* SPUIKit */ = {
+		DD5C8E6324546244009C4505 /* TKUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				DD5C8EB9245C22B3009C4505 /* Util */,
-				DD5C8EB324588EE8009C4505 /* SPToast.swift */,
-				DD5C8EB5245C2073009C4505 /* SPLoading.swift */,
-				DD5C8E66245462DA009C4505 /* SPViewController.swift */,
+				DD5C8EB324588EE8009C4505 /* TKToast.swift */,
+				DD5C8EB5245C2073009C4505 /* TKLoading.swift */,
+				DD5C8E66245462DA009C4505 /* TKViewController.swift */,
 				DD5C8EBA245C246B009C4505 /* UIVIew+Extension.swift */,
 			);
-			path = SPUIKit;
+			path = TKUIKit;
 			sourceTree = "<group>";
 		};
 		DD5C8EB9245C22B3009C4505 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C8EB7245C22A9009C4505 /* SPRootUtils.swift */,
+				DD5C8EB7245C22A9009C4505 /* TKRootUtils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -276,11 +276,11 @@
 		DDB25E6C244C73C10035B6AC /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C8E6324546244009C4505 /* SPUIKit */,
-				DD5C8E0E244DF908009C4505 /* SPLogger */,
-				DDB25E79244DE2D60035B6AC /* SPMoya */,
+				DD5C8E6324546244009C4505 /* TKUIKit */,
+				DD5C8E0E244DF908009C4505 /* TKLogger */,
+				DDB25E79244DE2D60035B6AC /* TKMoya */,
 				DDB25E7A244DE30B0035B6AC /* Extension */,
-				DD5C8E1A2453475B009C4505 /* SPError.swift */,
+				DD5C8E1A2453475B009C4505 /* TKError.swift */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -311,13 +311,13 @@
 			path = Platform;
 			sourceTree = "<group>";
 		};
-		DDB25E79244DE2D60035B6AC /* SPMoya */ = {
+		DDB25E79244DE2D60035B6AC /* TKMoya */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C8E0C244DF231009C4505 /* SPMoyaProvider.swift */,
+				DD5C8E0C244DF231009C4505 /* TKMoyaProvider.swift */,
 				DD5C8E0A244DEEDD009C4505 /* Moya+Extension.swift */,
 			);
-			path = SPMoya;
+			path = TKMoya;
 			sourceTree = "<group>";
 		};
 		DDB25E7A244DE30B0035B6AC /* Extension */ = {
@@ -513,27 +513,27 @@
 			files = (
 				DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */,
 				DD5C8E6224545ADA009C4505 /* HomeViewModel.swift in Sources */,
-				DD5C8E16244E0239009C4505 /* SPLogConsoleDestination.swift in Sources */,
+				DD5C8E16244E0239009C4505 /* TKLogConsoleDestination.swift in Sources */,
 				DD5C8EA92455DAD3009C4505 /* JSON+Exteension.swift in Sources */,
-				DD5C8E10244DFAFA009C4505 /* SPLogger.swift in Sources */,
-				DD5C8E14244E00EC009C4505 /* SPLogFilter.swift in Sources */,
-				DD5C8EB6245C2073009C4505 /* SPLoading.swift in Sources */,
+				DD5C8E10244DFAFA009C4505 /* TKLogger.swift in Sources */,
+				DD5C8E14244E00EC009C4505 /* TKLogFilter.swift in Sources */,
+				DD5C8EB6245C2073009C4505 /* TKLoading.swift in Sources */,
 				DD5C8E1D2453DFEB009C4505 /* RootTabViewController.swift in Sources */,
 				DDB25E76244CA1800035B6AC /* AppConfigModel.swift in Sources */,
-				DD5C8E1B2453475B009C4505 /* SPError.swift in Sources */,
+				DD5C8E1B2453475B009C4505 /* TKError.swift in Sources */,
 				DDB25E72244C9A570035B6AC /* DeviceConfigModel.swift in Sources */,
-				DD5C8E0D244DF231009C4505 /* SPMoyaProvider.swift in Sources */,
-				DD5C8EB424588EE8009C4505 /* SPToast.swift in Sources */,
+				DD5C8E0D244DF231009C4505 /* TKMoyaProvider.swift in Sources */,
+				DD5C8EB424588EE8009C4505 /* TKToast.swift in Sources */,
 				DDB25E6F244C767A0035B6AC /* RokidApi.swift in Sources */,
-				DD5C8EB8245C22A9009C4505 /* SPRootUtils.swift in Sources */,
+				DD5C8EB8245C22A9009C4505 /* TKRootUtils.swift in Sources */,
 				DD5C8E0B244DEEDD009C4505 /* Moya+Extension.swift in Sources */,
 				DD5C8E5F24543B5F009C4505 /* SettingsViewController.swift in Sources */,
 				DD5C8EBB245C246B009C4505 /* UIVIew+Extension.swift in Sources */,
-				DD5C8E19244E037E009C4505 /* SPLogFileDestination.swift in Sources */,
+				DD5C8E19244E037E009C4505 /* TKLogFileDestination.swift in Sources */,
 				DDB25E74244CA1430035B6AC /* RokidResponse.swift in Sources */,
 				DDB25D77244C54580035B6AC /* HomeViewController.swift in Sources */,
-				DD5C8E12244E0001009C4505 /* SPLogBaseDestination.swift in Sources */,
-				DD5C8E67245462DA009C4505 /* SPViewController.swift in Sources */,
+				DD5C8E12244E0001009C4505 /* TKLogBaseDestination.swift in Sources */,
+				DD5C8E67245462DA009C4505 /* TKViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

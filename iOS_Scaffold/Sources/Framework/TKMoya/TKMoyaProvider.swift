@@ -1,5 +1,5 @@
 //
-//  SPMoyaProvider.swift
+//  TKMoyaProvider.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/20.
@@ -11,19 +11,19 @@ import Moya
 
 let SUCCESS_STATUS_CODE = 200
 
-class SPMoyaProvider<Target: TargetType>: MoyaProvider<Target> {
+class TKMoyaProvider<Target: TargetType>: MoyaProvider<Target> {
     
     @discardableResult
     func request<D: Codable>(_ type: D.Type,
                              _ target: Target,
                              callbackQueue: DispatchQueue? = .none,
                              progress: ProgressBlock? = .none,
-                             completion: @escaping (_ result: Result<D, SPError>) -> Void) -> Cancellable {
+                             completion: @escaping (_ result: Result<D, TKError>) -> Void) -> Cancellable {
         
         return super.request(target, callbackQueue: callbackQueue, progress: progress) { result in
             switch result {
             case .success(let result):
-                SPLogger.debug("Success")
+                TKLogger.debug("Success")
                 
                 if(result.statusCode == SUCCESS_STATUS_CODE) {
                     guard let data = try? result.map(D.self) else {
@@ -40,7 +40,7 @@ class SPMoyaProvider<Target: TargetType>: MoyaProvider<Target> {
                 // TODO
                 completion(.failure(.network("", "")))
             case .failure(let error):
-                SPLogger.warning("Failure")
+                TKLogger.warning("Failure")
 
                 // TODO
                 completion(.failure(.network("", error.errorDescription)))

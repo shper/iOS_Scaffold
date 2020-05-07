@@ -1,5 +1,5 @@
 //
-//  SPRootUtil.swift
+//  TKRootUtil.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/5/1.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SPRootUtils {
+class TKRootUtils {
     
     // 获取用于显示提示框的 window
     static func getRootWindow() -> UIView {

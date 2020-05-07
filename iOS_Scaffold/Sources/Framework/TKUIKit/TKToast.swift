@@ -1,5 +1,5 @@
 //
-//  SPToast.swift
+//  TKToast.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/29.
@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class SPToast {
+class TKToast {
     
     // 显示 Toast
     static func showToast(_ title: String,
                           duration: ToastDuration = .short,
-                          view: UIView = SPRootUtils.getRootWindow(),
+                          view: UIView = TKRootUtils.getRootWindow(),
                           yOffset: CGFloat = 0) {
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
         

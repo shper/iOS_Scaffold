@@ -1,5 +1,5 @@
 //
-//  SPLogFilter.swift
+//  TKLogFilter.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/21.
@@ -19,10 +19,10 @@ import Foundation
 /// filter must pass in order for the message to be logged
 public protocol FilterType : class {
     func apply(_ value: Any) -> Bool
-    func getTarget() -> SPLogFilter.TargetType
+    func getTarget() -> TKLogFilter.TargetType
     func isRequired() -> Bool
     func isExcluded() -> Bool
-    func reachedMinLevel(_ level: SPLogger.Level) -> Bool
+    func reachedMinLevel(_ level: TKLogger.Level) -> Bool
 }
 
 /// Filters is syntactic sugar used to easily construct filters
@@ -33,11 +33,11 @@ public class Filters {
 }
 
 /// Filter is an abstract base class for other filters
-public class SPLogFilter {
+public class TKLogFilter {
     public enum TargetType {
-        case Path(SPLogFilter.ComparisonType)
-        case Function(SPLogFilter.ComparisonType)
-        case Message(SPLogFilter.ComparisonType)
+        case Path(TKLogFilter.ComparisonType)
+        case Function(TKLogFilter.ComparisonType)
+        case Message(TKLogFilter.ComparisonType)
     }
 
     public enum ComparisonType {
@@ -49,17 +49,17 @@ public class SPLogFilter {
         case Custom((String) -> Bool)
     }
 
-    let targetType: SPLogFilter.TargetType
+    let targetType: TKLogFilter.TargetType
     let required: Bool
-    let minLevel: SPLogger.Level
+    let minLevel: TKLogger.Level
 
-    public init(_ target: SPLogFilter.TargetType, required: Bool, minLevel: SPLogger.Level) {
+    public init(_ target: TKLogFilter.TargetType, required: Bool, minLevel: TKLogger.Level) {
         self.targetType = target
         self.required = required
         self.minLevel = minLevel
     }
 
-    public func getTarget() -> SPLogFilter.TargetType {
+    public func getTarget() -> TKLogFilter.TargetType {
         return self.targetType
     }
 
@@ -72,7 +72,7 @@ public class SPLogFilter {
     }
 
     /// returns true of set minLevel is >= as given level
-    public func reachedMinLevel(_ level: SPLogger.Level) -> Bool {
+    public func reachedMinLevel(_ level: TKLogger.Level) -> Bool {
         //print("checking if given level \(level) >= \(minLevel)")
         return level.rawValue >= minLevel.rawValue
     }
@@ -81,14 +81,14 @@ public class SPLogFilter {
 /// CompareFilter is a FilterType that can filter based upon whether a target
 /// starts with, contains or ends with a specific string. CompareFilters can be
 /// case sensitive.
-public class CompareFilter: SPLogFilter, FilterType {
+public class CompareFilter: TKLogFilter, FilterType {
 
-    private var filterComparisonType: SPLogFilter.ComparisonType?
+    private var filterComparisonType: TKLogFilter.ComparisonType?
 
-    override public init(_ target: SPLogFilter.TargetType, required: Bool, minLevel: SPLogger.Level) {
+    override public init(_ target: TKLogFilter.TargetType, required: Bool, minLevel: TKLogger.Level) {
         super.init(target, required: required, minLevel: minLevel)
 
-        let comparisonType: SPLogFilter.ComparisonType?
+        let comparisonType: TKLogFilter.ComparisonType?
         switch self.getTarget() {
         case let .Function(comparison):
             comparisonType = comparison
@@ -167,31 +167,31 @@ public class CompareFilter: SPLogFilter, FilterType {
 // Syntactic sugar for creating a function comparison filter
 public class FunctionFilterFactory {
     public static func startsWith(_ prefixes: String..., caseSensitive: Bool = false,
-                                  required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                  required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Function(.StartsWith(prefixes, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func contains(_ strings: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Function(.Contains(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func excludes(_ strings: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Function(.Excludes(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func endsWith(_ suffixes: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Function(.EndsWith(suffixes, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func equals(_ strings: String..., caseSensitive: Bool = false,
-                              required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                              required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Function(.Equals(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
-    public static func custom(required: Bool = false, minLevel: SPLogger.Level = .verbose, filterPredicate: @escaping (String) -> Bool) -> FilterType {
+    public static func custom(required: Bool = false, minLevel: TKLogger.Level = .verbose, filterPredicate: @escaping (String) -> Bool) -> FilterType {
         return CompareFilter(.Function(.Custom(filterPredicate)), required: required, minLevel: minLevel)
     }
 }
@@ -199,31 +199,31 @@ public class FunctionFilterFactory {
 // Syntactic sugar for creating a message comparison filter
 public class MessageFilterFactory {
     public static func startsWith(_ prefixes: String..., caseSensitive: Bool = false,
-                                  required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                  required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Message(.StartsWith(prefixes, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func contains(_ strings: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Message(.Contains(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func excludes(_ strings: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Message(.Excludes(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func endsWith(_ suffixes: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Message(.EndsWith(suffixes, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func equals(_ strings: String..., caseSensitive: Bool = false,
-                              required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                              required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Message(.Equals(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
-    public static func custom(required: Bool = false, minLevel: SPLogger.Level = .verbose, filterPredicate: @escaping (String) -> Bool) -> FilterType {
+    public static func custom(required: Bool = false, minLevel: TKLogger.Level = .verbose, filterPredicate: @escaping (String) -> Bool) -> FilterType {
         return CompareFilter(.Message(.Custom(filterPredicate)), required: required, minLevel: minLevel)
     }
 }
@@ -231,41 +231,41 @@ public class MessageFilterFactory {
 // Syntactic sugar for creating a path comparison filter
 public class PathFilterFactory {
     public static func startsWith(_ prefixes: String..., caseSensitive: Bool = false,
-                                  required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                  required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Path(.StartsWith(prefixes, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func contains(_ strings: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Path(.Contains(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func excludes(_ strings: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Path(.Excludes(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func endsWith(_ suffixes: String..., caseSensitive: Bool = false,
-                                required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                                required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Path(.EndsWith(suffixes, caseSensitive)), required: required, minLevel: minLevel)
     }
 
     public static func equals(_ strings: String..., caseSensitive: Bool = false,
-                              required: Bool = false, minLevel: SPLogger.Level = .verbose) -> FilterType {
+                              required: Bool = false, minLevel: TKLogger.Level = .verbose) -> FilterType {
         return CompareFilter(.Path(.Equals(strings, caseSensitive)), required: required, minLevel: minLevel)
     }
 
-    public static func custom(required: Bool = false, minLevel: SPLogger.Level = .verbose, filterPredicate: @escaping (String) -> Bool) -> FilterType {
+    public static func custom(required: Bool = false, minLevel: TKLogger.Level = .verbose, filterPredicate: @escaping (String) -> Bool) -> FilterType {
         return CompareFilter(.Path(.Custom(filterPredicate)), required: required, minLevel: minLevel)
     }
 }
 
-extension SPLogFilter.TargetType : Equatable {
+extension TKLogFilter.TargetType : Equatable {
 }
 
 // The == does not compare associated values for each enum. Instead == evaluates to true
 // if both enums are the same "types", ignoring the associated values of each enum
-public func == (lhs: SPLogFilter.TargetType, rhs: SPLogFilter.TargetType) -> Bool {
+public func == (lhs: TKLogFilter.TargetType, rhs: TKLogFilter.TargetType) -> Bool {
     switch (lhs, rhs) {
 
     case (.Path(_), .Path(_)):

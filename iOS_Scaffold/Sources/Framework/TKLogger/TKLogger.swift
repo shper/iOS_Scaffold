@@ -1,5 +1,5 @@
 //
-//  SPLogger.swift
+//  TKLogger.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class SPLogger {
+public final class TKLogger {
 
     public enum Level: Int {
         case verbose = 0
@@ -19,10 +19,10 @@ public final class SPLogger {
     }
     
     // a set of active destinations
-    public private(set) static var destinations = Set<SPLogBaseDestination>()
+    public private(set) static var destinations = Set<TKLogBaseDestination>()
     private(set) static var loggerTag = "Shper"
     
-    /// 初始化SPLogger
+    /// 初始化TKLogger
     ///
     /// - Parameters:
     ///   - tag: 日志标签
@@ -34,7 +34,7 @@ public final class SPLogger {
         guard !tag.isEmpty else { return false }
         
         loggerTag = tag
-        let console = SPLogConsoleDestination.init()
+        let console = TKLogConsoleDestination.init()
         console.useNSLog = useNSLog
         return addDestination(console)
     }
@@ -43,7 +43,7 @@ public final class SPLogger {
 
     /// returns boolean about success
     @discardableResult
-    public class func addDestination(_ destination: SPLogBaseDestination) -> Bool {
+    public class func addDestination(_ destination: TKLogBaseDestination) -> Bool {
         if destinations.contains(destination) {
             return false
         }
@@ -101,14 +101,14 @@ public final class SPLogger {
     }
 
     /// custom logging to manually adjust values, should just be used by other frameworks
-    class func custom(level: SPLogger.Level, message: @autoclosure () -> Any, internalInfo: @autoclosure () -> Any,
+    class func custom(level: TKLogger.Level, message: @autoclosure () -> Any, internalInfo: @autoclosure () -> Any,
                              file: String = #file, function: String = #function, line: Int = #line) {
         dispatch_send(level: level, message: message(), internalInfo: internalInfo(), thread: threadName(),
                       file: file, function: function, line: line)
     }
 
     /// internal helper which dispatches send to dedicated queue if minLevel is ok
-    class func dispatch_send(level: SPLogger.Level, message: @autoclosure () -> Any, internalInfo: @autoclosure () -> Any,
+    class func dispatch_send(level: TKLogger.Level, message: @autoclosure () -> Any, internalInfo: @autoclosure () -> Any,
         thread: String, file: String, function: String, line: Int) {
         
         var msgStr = "\(message())"
@@ -153,7 +153,7 @@ public final class SPLogger {
     }
 }
 
-extension SPLogger {
+extension TKLogger {
     public static func paramInvalid(_ paramName: String) -> String {
         return "The parameter: \(paramName) is empty. do nothing!"
     }

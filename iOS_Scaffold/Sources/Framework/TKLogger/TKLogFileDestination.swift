@@ -1,5 +1,5 @@
 //
-//  SPLogFileDestination.swift
+//  TKLogFileDestination.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/4/21.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SPLogFileDestination: SPLogBaseDestination {
+public class TKLogFileDestination: TKLogBaseDestination {
     
     public var logFileURL: URL?
     public var syncAfterEachWrite: Bool = false
@@ -48,7 +48,7 @@ public class SPLogFileDestination: SPLogBaseDestination {
         #endif
         
         if let baseURL = baseURL {
-            logFileURL = baseURL.appendingPathComponent("SPLogger.log", isDirectory: false)
+            logFileURL = baseURL.appendingPathComponent("TKLogger.log", isDirectory: false)
         }
         super.init()
         
@@ -65,7 +65,7 @@ public class SPLogFileDestination: SPLogBaseDestination {
     }
     
     // append to file. uses full base class functionality
-    override public func send(_ level: SPLogger.Level, msg: String, internalInfo: String, thread: String,
+    override public func send(_ level: TKLogger.Level, msg: String, internalInfo: String, thread: String,
                               file: String, function: String, line: Int) -> String? {
         let formattedString = super.send(level, msg: msg, internalInfo: internalInfo, thread: thread, file: file, function: function, line: line)
         
@@ -118,7 +118,7 @@ public class SPLogFileDestination: SPLogBaseDestination {
             }
             return true
         } catch {
-            SPLogger.error("SPLog File Destination could not write to file \(url).")
+            TKLogger.error("TKLogger File Destination could not write to file \(url).")
             return false
         }
     }
@@ -132,7 +132,7 @@ public class SPLogFileDestination: SPLogBaseDestination {
             fileHandle = nil
             return true
         } catch {
-            SPLogger.error("SPLog File Destination could not remove file \(url).")
+            TKLogger.error("TKLogger File Destination could not remove file \(url).")
             return false
         }
     }

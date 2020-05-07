@@ -1,5 +1,5 @@
 //
-//  SPLoading.swift
+//  TKLoading.swift
 //  iOS_Scaffold
 //
 //  Created by Shper on 2020/5/1.
@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class SPLoading {
+class TKLoading {
     
-    static var shared: SPLoading = SPLoading()
+    static var shared: TKLoading = TKLoading()
     
     var loadingHud: MBProgressHUD?
      
     func show(title: String = "请稍候",
-              view: UIView = SPRootUtils.getRootWindow()) {
+              view: UIView = TKRootUtils.getRootWindow()) {
         
         loadingHud?.hide(animated: true)
         
