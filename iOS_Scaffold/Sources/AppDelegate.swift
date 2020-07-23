@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TKLogger
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,15 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         AppDelegate.shared = self
         
-        TKLogger.setup(tag: "Scaffold")
-        
+        setupTKLogger()
+
         setupBootViewController()
         
         return true
+    }
+    
+    private func setupTKLogger() {
+        TKLogger.setup(tag: "Scaffold")
+        TKLogger.addDestination(TKLogConsoleDestination())
     }
     
     private func setupBootViewController() {

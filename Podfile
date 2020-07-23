@@ -8,6 +8,8 @@ source 'https://github.com/aliyun/aliyun-specs.git'
 
 target 'iOS_Scaffold' do
 
+  pod 'TKLogger'
+  
   pod 'SnapKit',        :git => 'http://gitee.com/shper/SnapKit.git',     :branch => 'release_5.0.1.x'
   pod 'MBProgressHUD',  '~>1.2.0'
   pod 'Moya',           '~>13.0.1'

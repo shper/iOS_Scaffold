@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		28577ED9E9158E381554B811 /* Pods_iOS_Scaffold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB89E1BF5B9631D292E048D9 /* Pods_iOS_Scaffold.framework */; };
+		DD29E9F0248F2865002CA6E1 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD29E9EF248F2865002CA6E1 /* iconfont.ttf */; };
+		DD29E9F3248F28A7002CA6E1 /* UIImage+IconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29E9F1248F28A7002CA6E1 /* UIImage+IconFont.swift */; };
+		DD29E9F4248F28A7002CA6E1 /* UIFont+Iconfont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29E9F2248F28A7002CA6E1 /* UIFont+Iconfont.swift */; };
 		DD5C8E0B244DEEDD009C4505 /* Moya+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0A244DEEDD009C4505 /* Moya+Extension.swift */; };
 		DD5C8E0D244DF231009C4505 /* TKMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0C244DF231009C4505 /* TKMoyaProvider.swift */; };
-		DD5C8E10244DFAFA009C4505 /* TKLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E0F244DFAFA009C4505 /* TKLogger.swift */; };
-		DD5C8E12244E0001009C4505 /* TKLogBaseDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E11244E0001009C4505 /* TKLogBaseDestination.swift */; };
-		DD5C8E14244E00EC009C4505 /* TKLogFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E13244E00EC009C4505 /* TKLogFilter.swift */; };
-		DD5C8E16244E0239009C4505 /* TKLogConsoleDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E15244E0239009C4505 /* TKLogConsoleDestination.swift */; };
-		DD5C8E19244E037E009C4505 /* TKLogFileDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E18244E037E009C4505 /* TKLogFileDestination.swift */; };
 		DD5C8E1B2453475B009C4505 /* TKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E1A2453475B009C4505 /* TKError.swift */; };
 		DD5C8E1D2453DFEB009C4505 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E1C2453DFEB009C4505 /* RootTabViewController.swift */; };
 		DD5C8E5F24543B5F009C4505 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8E5E24543B5F009C4505 /* SettingsViewController.swift */; };
@@ -58,13 +56,12 @@
 		08A6CEE81849C59188D632A7 /* Pods-iOS_Scaffold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Scaffold.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Scaffold/Pods-iOS_Scaffold.debug.xcconfig"; sourceTree = "<group>"; };
 		740F465A25B21D24A71697D4 /* Pods-iOS_Scaffold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Scaffold.release.xcconfig"; path = "Target Support Files/Pods-iOS_Scaffold/Pods-iOS_Scaffold.release.xcconfig"; sourceTree = "<group>"; };
 		CB89E1BF5B9631D292E048D9 /* Pods_iOS_Scaffold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Scaffold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD29E9EF248F2865002CA6E1 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		DD29E9F1248F28A7002CA6E1 /* UIImage+IconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+IconFont.swift"; sourceTree = "<group>"; };
+		DD29E9F2248F28A7002CA6E1 /* UIFont+Iconfont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Iconfont.swift"; sourceTree = "<group>"; };
+		DD29E9FA248F3B46002CA6E1 /* iOS_Scaffold-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Scaffold-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD5C8E0A244DEEDD009C4505 /* Moya+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+Extension.swift"; sourceTree = "<group>"; };
 		DD5C8E0C244DF231009C4505 /* TKMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKMoyaProvider.swift; sourceTree = "<group>"; };
-		DD5C8E0F244DFAFA009C4505 /* TKLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogger.swift; sourceTree = "<group>"; };
-		DD5C8E11244E0001009C4505 /* TKLogBaseDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogBaseDestination.swift; sourceTree = "<group>"; };
-		DD5C8E13244E00EC009C4505 /* TKLogFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogFilter.swift; sourceTree = "<group>"; };
-		DD5C8E15244E0239009C4505 /* TKLogConsoleDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogConsoleDestination.swift; sourceTree = "<group>"; };
-		DD5C8E18244E037E009C4505 /* TKLogFileDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLogFileDestination.swift; sourceTree = "<group>"; };
 		DD5C8E1A2453475B009C4505 /* TKError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKError.swift; sourceTree = "<group>"; };
 		DD5C8E1C2453DFEB009C4505 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
 		DD5C8E5E24543B5F009C4505 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -127,16 +124,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD5C8E0E244DF908009C4505 /* TKLogger */ = {
+		DD29E9EE248F2815002CA6E1 /* iconfont */ = {
 			isa = PBXGroup;
 			children = (
-				DD5C8E0F244DFAFA009C4505 /* TKLogger.swift */,
-				DD5C8E11244E0001009C4505 /* TKLogBaseDestination.swift */,
-				DD5C8E13244E00EC009C4505 /* TKLogFilter.swift */,
-				DD5C8E15244E0239009C4505 /* TKLogConsoleDestination.swift */,
-				DD5C8E18244E037E009C4505 /* TKLogFileDestination.swift */,
+				DD29E9EF248F2865002CA6E1 /* iconfont.ttf */,
 			);
-			path = TKLogger;
+			path = iconfont;
 			sourceTree = "<group>";
 		};
 		DD5C8E5C24543AF4009C4505 /* Root */ = {
@@ -241,6 +234,7 @@
 				DDB25E77244DE2630035B6AC /* Platform */,
 				DDB25E6C244C73C10035B6AC /* Framework */,
 				DDB25D42244C43BC0035B6AC /* AppDelegate.swift */,
+				DD29E9FA248F3B46002CA6E1 /* iOS_Scaffold-Bridging-Header.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -248,6 +242,7 @@
 		DDB25D73244C52530035B6AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD29E9EE248F2815002CA6E1 /* iconfont */,
 				DDB25D48244C43BD0035B6AC /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -277,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				DD5C8E6324546244009C4505 /* TKUIKit */,
-				DD5C8E0E244DF908009C4505 /* TKLogger */,
 				DDB25E79244DE2D60035B6AC /* TKMoya */,
 				DDB25E7A244DE30B0035B6AC /* Extension */,
 				DD5C8E1A2453475B009C4505 /* TKError.swift */,
@@ -323,6 +317,8 @@
 		DDB25E7A244DE30B0035B6AC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DD29E9F2248F28A7002CA6E1 /* UIFont+Iconfont.swift */,
+				DD29E9F1248F28A7002CA6E1 /* UIImage+IconFont.swift */,
 				DD5C8EA82455DAD3009C4505 /* JSON+Exteension.swift */,
 			);
 			path = Extension;
@@ -407,6 +403,7 @@
 				TargetAttributes = {
 					DDB25D3E244C43BC0035B6AC = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1150;
 					};
 					DDB25D54244C43BD0035B6AC = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -445,6 +442,7 @@
 			files = (
 				DDB25D4F244C43BD0035B6AC /* LaunchScreen.storyboard in Resources */,
 				DDB25D49244C43BD0035B6AC /* Assets.xcassets in Resources */,
+				DD29E9F0248F2865002CA6E1 /* iconfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,10 +511,7 @@
 			files = (
 				DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */,
 				DD5C8E6224545ADA009C4505 /* HomeViewModel.swift in Sources */,
-				DD5C8E16244E0239009C4505 /* TKLogConsoleDestination.swift in Sources */,
 				DD5C8EA92455DAD3009C4505 /* JSON+Exteension.swift in Sources */,
-				DD5C8E10244DFAFA009C4505 /* TKLogger.swift in Sources */,
-				DD5C8E14244E00EC009C4505 /* TKLogFilter.swift in Sources */,
 				DD5C8EB6245C2073009C4505 /* TKLoading.swift in Sources */,
 				DD5C8E1D2453DFEB009C4505 /* RootTabViewController.swift in Sources */,
 				DDB25E76244CA1800035B6AC /* AppConfigModel.swift in Sources */,
@@ -524,15 +519,15 @@
 				DDB25E72244C9A570035B6AC /* DeviceConfigModel.swift in Sources */,
 				DD5C8E0D244DF231009C4505 /* TKMoyaProvider.swift in Sources */,
 				DD5C8EB424588EE8009C4505 /* TKToast.swift in Sources */,
+				DD29E9F3248F28A7002CA6E1 /* UIImage+IconFont.swift in Sources */,
 				DDB25E6F244C767A0035B6AC /* RokidApi.swift in Sources */,
 				DD5C8EB8245C22A9009C4505 /* TKRootUtils.swift in Sources */,
 				DD5C8E0B244DEEDD009C4505 /* Moya+Extension.swift in Sources */,
 				DD5C8E5F24543B5F009C4505 /* SettingsViewController.swift in Sources */,
 				DD5C8EBB245C246B009C4505 /* UIVIew+Extension.swift in Sources */,
-				DD5C8E19244E037E009C4505 /* TKLogFileDestination.swift in Sources */,
+				DD29E9F4248F28A7002CA6E1 /* UIFont+Iconfont.swift in Sources */,
 				DDB25E74244CA1430035B6AC /* RokidResponse.swift in Sources */,
 				DDB25D77244C54580035B6AC /* HomeViewController.swift in Sources */,
-				DD5C8E12244E0001009C4505 /* TKLogBaseDestination.swift in Sources */,
 				DD5C8E67245462DA009C4505 /* TKViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,7 +694,9 @@
 			baseConfigurationReference = 08A6CEE81849C59188D632A7 /* Pods-iOS_Scaffold.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 657YYCUR9D;
 				ENABLE_PREVIEWS = YES;
@@ -712,6 +709,8 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.shper.scaffold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_Scaffold/Sources/iOS_Scaffold-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -722,7 +721,9 @@
 			baseConfigurationReference = 740F465A25B21D24A71697D4 /* Pods-iOS_Scaffold.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 657YYCUR9D;
 				ENABLE_PREVIEWS = YES;
@@ -735,6 +736,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.shper.scaffold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_Scaffold/Sources/iOS_Scaffold-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

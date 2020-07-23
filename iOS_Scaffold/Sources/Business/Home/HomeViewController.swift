@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import TKLogger
 
 class HomeViewController: TKViewController, HomeViewModelDelegate {
 
@@ -29,6 +30,13 @@ class HomeViewController: TKViewController, HomeViewModelDelegate {
             make.height.equalTo(300)
             make.top.equalToSuperview()
         }
+        
+        //        self.view.addSubview(self.testImageView)
+        //        self.testImageView.snp.makeConstraints { (make) in
+        //            make.width.equalTo(100)
+        //            make.height.equalTo(100)
+        //            make.top.equalTo(self.testTextView).offset(50)
+        //        }
         
         self.view.addSubview(self.button)
         self.button.snp.makeConstraints { (make) in
@@ -59,6 +67,13 @@ class HomeViewController: TKViewController, HomeViewModelDelegate {
         textView.isEditable = false
         
         return textView
+    }()
+    
+    fileprivate lazy var testImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage.iconFont(code: "\u{e7a7}", size: 50.0)
+        
+        return imageView
     }()
     
     fileprivate lazy var button: UIButton = {
@@ -94,5 +109,32 @@ class HomeViewController: TKViewController, HomeViewModelDelegate {
                 print("BBB")
         }
     }
+    
+//    func saveToFile() {
+//        let fileManager = FileManager.default
+//
+//        // 获取Documents目录
+//        let urlForDocument = fileManager.urls(for: .documentDirectory, in:.userDomainMask)
+//        let urlDocument = urlForDocument[0] as URL
+//
+//        TKLogger.debug("Document:\(urlDocument)")
+//
+//        let myDocuments = urlDocument.appendingPathComponent("MyDocuments")
+//        try! fileManager.createDirectory(atPath: myDocuments.path,
+//                                         withIntermediateDirectories: true,
+//                                         attributes: nil)
+//
+//
+//        // 获取 Library/Caches 目录
+//        let urlForCaches = fileManager.urls(for: .cachesDirectory, in:.userDomainMask)
+//        let urlCache = urlForCaches[0] as URL
+//
+//        TKLogger.debug("Document:\(urlCache)")
+//
+//        let myCache = urlDocument.appendingPathComponent("MyCache")
+//        try! fileManager.createDirectory(atPath: myCache.path,
+//                                         withIntermediateDirectories: true,
+//                                         attributes: nil)
+//    }
     
 }
