@@ -84,7 +84,7 @@ class HomeViewController: TKViewController, HomeViewModelDelegate {
         return button
     }()
     
-    // MARK - Target
+    // MARK: - Target
     
     @objc func btnClickFun() {
         TKLogger.debug("AAAAA")
