@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupTKLogger() {
-        TKLogger.setup(tag: "Scaffold")
+        TKLogger.setup(tag: "iOS_Scaffold")
         TKLogger.addDestination(TKLogConsoleDestination())
     }
     
