@@ -11,7 +11,7 @@ target 'iOS_Scaffold' do
   
   pod 'SnapKit',        '~>5.0.1'
   pod 'MBProgressHUD',  '~>1.2.0'
-  pod 'Moya',           '~>13.0.1'
+  pod 'Moya',           '~>14.0.0'
 
   # Pods for iOS_Scaffold
 

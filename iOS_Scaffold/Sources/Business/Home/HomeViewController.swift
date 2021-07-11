@@ -26,25 +26,17 @@ class HomeViewController: TKViewController, HomeViewModelDelegate {
         
         self.view.addSubview(self.testTextView)
         self.testTextView.snp.makeConstraints { (make) in
+            make.height.equalTo(600)
             make.width.equalToSuperview()
-            make.height.equalTo(300)
             make.top.equalToSuperview()
         }
         
-        //        self.view.addSubview(self.testImageView)
-        //        self.testImageView.snp.makeConstraints { (make) in
-        //            make.width.equalTo(100)
-        //            make.height.equalTo(100)
-        //            make.top.equalTo(self.testTextView).offset(50)
-        //        }
-        
         self.view.addSubview(self.button)
         self.button.snp.makeConstraints { (make) in
-            make.width.equalToSuperview().offset(-100)
             make.height.equalTo(50)
             make.left.equalToSuperview().offset(50)
-            make.right.equalToSuperview().offset(50)
-            make.top.equalTo(self.testTextView.snp.bottom).offset(50)
+            make.right.equalToSuperview().offset(-50)
+            make.bottom.equalToSuperview().offset(-120)
         }
         
         self.button.addTarget(self, action: #selector(self.btnClickFun), for: .touchDown)
@@ -87,7 +79,7 @@ class HomeViewController: TKViewController, HomeViewModelDelegate {
     // MARK: - Target
     
     @objc func btnClickFun() {
-        TKLogger.debug("AAAAA")
+        TKLogger.debug("Start button clicked.")
 //        self.showToast("AAAA")
 //        self.showLoading()
         
