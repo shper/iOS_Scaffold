@@ -23,15 +23,15 @@
 		DD5C8EB6245C2073009C4505 /* TKLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB5245C2073009C4505 /* TKLoading.swift */; };
 		DD5C8EB8245C22A9009C4505 /* TKRootUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EB7245C22A9009C4505 /* TKRootUtils.swift */; };
 		DD5C8EBB245C246B009C4505 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C8EBA245C246B009C4505 /* UIVIew+Extension.swift */; };
+		DDAE5E78269B182C00C4349D /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAE5E77269B182C00C4349D /* WeatherAPI.swift */; };
+		DDAE5E7A269B18D100C4349D /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAE5E79269B18D100C4349D /* WeatherResponse.swift */; };
 		DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D42244C43BC0035B6AC /* AppDelegate.swift */; };
 		DDB25D49244C43BD0035B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D48244C43BD0035B6AC /* Assets.xcassets */; };
 		DDB25D4F244C43BD0035B6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB25D4D244C43BD0035B6AC /* LaunchScreen.storyboard */; };
 		DDB25D5A244C43BD0035B6AC /* iOS_ScaffoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D59244C43BD0035B6AC /* iOS_ScaffoldTests.swift */; };
 		DDB25D65244C43BD0035B6AC /* iOS_ScaffoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D64244C43BD0035B6AC /* iOS_ScaffoldUITests.swift */; };
 		DDB25D77244C54580035B6AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25D76244C54580035B6AC /* HomeViewController.swift */; };
-		DDB25E6F244C767A0035B6AC /* RokidApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25E6E244C767A0035B6AC /* RokidApi.swift */; };
 		DDB25E72244C9A570035B6AC /* DeviceConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25E71244C9A570035B6AC /* DeviceConfigModel.swift */; };
-		DDB25E74244CA1430035B6AC /* RokidResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25E73244CA1430035B6AC /* RokidResponse.swift */; };
 		DDB25E76244CA1800035B6AC /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB25E75244CA1800035B6AC /* AppConfigModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +72,8 @@
 		DD5C8EB5245C2073009C4505 /* TKLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLoading.swift; sourceTree = "<group>"; };
 		DD5C8EB7245C22A9009C4505 /* TKRootUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKRootUtils.swift; sourceTree = "<group>"; };
 		DD5C8EBA245C246B009C4505 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
+		DDAE5E77269B182C00C4349D /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		DDAE5E79269B18D100C4349D /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		DDB25D3F244C43BC0035B6AC /* iOS_Scaffold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Scaffold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB25D42244C43BC0035B6AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB25D48244C43BD0035B6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,9 +86,7 @@
 		DDB25D64244C43BD0035B6AC /* iOS_ScaffoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ScaffoldUITests.swift; sourceTree = "<group>"; };
 		DDB25D66244C43BD0035B6AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB25D76244C54580035B6AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DDB25E6E244C767A0035B6AC /* RokidApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RokidApi.swift; sourceTree = "<group>"; };
 		DDB25E71244C9A570035B6AC /* DeviceConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfigModel.swift; sourceTree = "<group>"; };
-		DDB25E73244CA1430035B6AC /* RokidResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RokidResponse.swift; sourceTree = "<group>"; };
 		DDB25E75244CA1800035B6AC /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -282,8 +282,8 @@
 		DDB25E6D244C73F70035B6AC /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DDB25E6E244C767A0035B6AC /* RokidApi.swift */,
-				DDB25E73244CA1430035B6AC /* RokidResponse.swift */,
+				DDAE5E77269B182C00C4349D /* WeatherAPI.swift */,
+				DDAE5E79269B18D100C4349D /* WeatherResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -512,6 +512,7 @@
 				DDB25D43244C43BC0035B6AC /* AppDelegate.swift in Sources */,
 				DD5C8E6224545ADA009C4505 /* HomeViewModel.swift in Sources */,
 				DD5C8EA92455DAD3009C4505 /* JSON+Exteension.swift in Sources */,
+				DDAE5E7A269B18D100C4349D /* WeatherResponse.swift in Sources */,
 				DD5C8EB6245C2073009C4505 /* TKLoading.swift in Sources */,
 				DD5C8E1D2453DFEB009C4505 /* RootTabViewController.swift in Sources */,
 				DDB25E76244CA1800035B6AC /* AppConfigModel.swift in Sources */,
@@ -520,13 +521,12 @@
 				DD5C8E0D244DF231009C4505 /* TKMoyaProvider.swift in Sources */,
 				DD5C8EB424588EE8009C4505 /* TKToast.swift in Sources */,
 				DD29E9F3248F28A7002CA6E1 /* UIImage+IconFont.swift in Sources */,
-				DDB25E6F244C767A0035B6AC /* RokidApi.swift in Sources */,
 				DD5C8EB8245C22A9009C4505 /* TKRootUtils.swift in Sources */,
 				DD5C8E0B244DEEDD009C4505 /* Moya+Extension.swift in Sources */,
 				DD5C8E5F24543B5F009C4505 /* SettingsViewController.swift in Sources */,
+				DDAE5E78269B182C00C4349D /* WeatherAPI.swift in Sources */,
 				DD5C8EBB245C246B009C4505 /* UIVIew+Extension.swift in Sources */,
 				DD29E9F4248F28A7002CA6E1 /* UIFont+Iconfont.swift in Sources */,
-				DDB25E74244CA1430035B6AC /* RokidResponse.swift in Sources */,
 				DDB25D77244C54580035B6AC /* HomeViewController.swift in Sources */,
 				DD5C8E67245462DA009C4505 /* TKViewController.swift in Sources */,
 			);
@@ -701,7 +701,7 @@
 				DEVELOPMENT_TEAM = 657YYCUR9D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS_Scaffold/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -728,7 +728,7 @@
 				DEVELOPMENT_TEAM = 657YYCUR9D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS_Scaffold/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,16 +1,15 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.0'
 # Comment the next line if you don't want to use dynamic frameworks
 use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/aliyun/aliyun-specs.git'
 
 target 'iOS_Scaffold' do
 
   pod 'TKLogger'
   
-  pod 'SnapKit',        :git => 'http://gitee.com/shper/SnapKit.git',     :branch => 'release_5.0.1.x'
+  pod 'SnapKit',        '~>5.0.1'
   pod 'MBProgressHUD',  '~>1.2.0'
   pod 'Moya',           '~>13.0.1'
 
